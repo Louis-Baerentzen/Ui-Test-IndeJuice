@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+html {
+    background-color: #fff7e6;
+    font-family: 'Gotham-Book';
+    font-size: 12px;
+    color: #444;
+}
+
+
+/*---------------------------------------------
+COMMON  COMMON  COMMON  COMMON  COMMON  COMMON
+---------------------------------------------*/
+
+strong {font-family: 'Gotham-Medium';}
+
+.whiteText {
+    color: #fff;
+    text-shadow: 4px 4px rgba(0,0,0,0.1);
+    font-size: 120%;
+    letter-spacing: .05em;
+    font-family: 'Gotham-Light'
+}
+
+
+/*---------------------------------------------
+HEADER  HEADER  HEADER  HEADER  HEADER  HEADER
+---------------------------------------------*/
+
+header {
+    background-color: #ffbb36;
+    height: 60px;
+    padding: 1.5em;
+    border-top: 2px solid #ffff00;
+}
+
+h1 a {
+    font-family: 'Gotham-Medium';
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 4px 4px rgba(0,0,0,0.1);
+    float: left;
+    letter-spacing: .05em;
+    font-size: 80%;
+    
+}
+
+.strapline {
+    font-size: 150%;
+    float: right;
+}
+
+/*---------------------------------------------
+BODY    BODY    BODY    BODY    BODY    BODY
+---------------------------------------------*/
+
+/* FRUIT QUARTERS */
+.fruitQuarters img{
+    height: 80px;
+    position: absolute;
+    top: 20;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+/* PAGE TITLE */
+.asideLeft, .asideRight, .pageTitle {
+    display: inline-block;
+}
+
+.asideLeft, .asideRight {
+    width: 41%;
+    opacity: 40%;
+    margin-bottom: 5px;
+}
+
+.pageTitle {
+    text-transform: uppercase;
+    font-size: 120%;
+    padding: 0px 1em;
+}
+
+.subHeading {
+    width: 700px;
+    margin: 6em auto 0 auto;
+}
+
+/* SHOP ITEM */
+.shopItem {
+    position: relative;
+    width: 80%;
+    margin: 2em auto;
+    height: 125px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 4px 4px rgba(0,0,0,0.1);
+    transition: box-shadow, .25s;
+}
+
+.shopItem:hover {
+    box-shadow: 4px 4px rgba(0,0,0,0.375);
+    transition: box-shadow, .25s;
+}
+
+.photo {
+    float: left;
+    height: 80px;
+    width: auto;
+    margin: 22.5px 30px;
+}
+
+.productInfo {
+    width: 90%;
+    height: inherit;
+    padding: 2em;
+}
+
+.productTitle {
+    font-size: 120%;
+    font-family: 'Gotham-Light';
+    text-indent: -1em;
+}
+
+.productAboutMe {
+    margin-top: 2em;
+    line-height: 1.5em;
+}
+
+.priceLabel {
+    background-color: #8ccc4e;
+    padding: 8px 1.25em;
+    float: right;
+    position: absolute;
+    top: 15;  
+    right: -4;
+    
+}
+
+.priceLabel p {
+    color: #fff;
+}
+
+.priceLabelChisel {
+    position: absolute;
+    top: 0;
+    right: 117;
+    height: 10px;
+    width: 0px;
+    border-top: 31px solid #8ccc4e;
+    border-left: 20px solid transparent;
+}
+
+
+/*---------------------------------------------
+MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES
+---------------------------------------------*/
+
+@media only screen and (max-width: 1000px) {
+    .subHeading{width: 480px;}
+    .asideLeft, .asideRight {width: 37%;}
+    .shopItem {height: 150px;}
+    .photo {height: 110px;}
+}
+
+@media only screen and (max-width: 768px) {
+    .shopItem { width: 95%;}
+    .productAboutMe { width: 110%;}
+    .fruitQuarters img{ left: -20px;}
+    h1 a {
+        position: absolute;
+        top:0.7em;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 100%;
+    }
+    .strapline{ visibility: collapse;}
+}
+
+@media only screen and (max-width: 576px) {
+    .shopItem {height: 180px;}
+    .photo {height: 120px; margin: 50px 20px 0px 20px;}
+    .productTitle {text-indent: -12em;}
+}
+
